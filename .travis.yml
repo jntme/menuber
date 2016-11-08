@@ -11,8 +11,8 @@ install:
   - pip install -r requirements.txt
 
 script:
-  python tests/test_menu.py
-  python tests/test_menupoint.py
+  - python tests/test_menu.py
+  - python tests/test_menupoint.py
 
 branches:
   only:

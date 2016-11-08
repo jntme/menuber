@@ -2,6 +2,9 @@
 menuber
 =======
 
+.. image:: https://travis-ci.org/jntme/menuber.svg?branch=master
+    :target: https://travis-ci.org/jntme/menuber
+
 A package that makes cli menuing easier.
 
 How is this thing working?

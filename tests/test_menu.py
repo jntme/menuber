@@ -31,7 +31,7 @@ class TestMenu(unittest.TestCase):
         self.assertEqual(len(self.testMenu.menupoints), 2)
 
     def testRunFirstFunction(self):
-       self.assertEqual(self.testMenu.runMenuPoint(1), 6)
+       self.assertEqual(self.testMenu.runMenupoint(1), 6)
 
     def testRunSecondFunction(self):
         pass

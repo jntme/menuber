@@ -2,6 +2,7 @@ class Menu:
     """
     Main class of the package. A menu contains menupoints.
     """
+
     def __init__(self, title, *menupoints):
         self.title = title
         self.menupoints = list(menupoints)
@@ -12,10 +13,15 @@ class Menu:
     def addMenupoints(self, *menupoints):
         self.menupoints.extend(menupoints)
 
-    def runMenupoint(self, menupointIndex):
-        """Runs the Function on Menupoint with the given index."""
-        print(self.menupoints[menupointIndex])
-        return self.menupoints[menupointIndex].runFunction()
+    def runMenupoint(self, menupointNumber):
+        """Runs the Function on Menupoint with the given menupoint number (index + 1).
+        """
+        menupointNumber = menupointNumber - 1
+        #TODO: add exceptions for border cases
+
+        print(self.menupoints[menupointNumber])
+        return self.menupoints[menupointNumber].runFunction()
+
 
 class MenupointNotExistingError(Exception):
     def __init__(self, message):

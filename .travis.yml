@@ -18,5 +18,7 @@ script: python setup.py test
 branches:
   only:
     - master
-
+    
+after_success:
+  - coveralls
 

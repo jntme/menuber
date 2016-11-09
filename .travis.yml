@@ -13,9 +13,7 @@ install:
   - pip install .
   - pip install -r requirements.txt
 
-script:
-  - python -m unit2 tests/test_menu.py
-  - python -m unit2 tests/test_menupoint.py
+script: python setup.py test
 
 branches:
   only:

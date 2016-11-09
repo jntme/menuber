@@ -1,6 +1,7 @@
 import unittest2 as unittest
 
 import menuber
+from menuber.menu import MenupointNotExistingError
 
 
 def addThreeNumbers(a, b, c):
@@ -34,5 +35,16 @@ class TestMenu(unittest.TestCase):
        self.assertEqual(self.testMenu.runMenupoint(1), 6)
 
     def testRunSecondFunction(self):
-        pass
+        self.assertEqual(self.testMenu.runMenupoint(2), -5)
 
+    def testCallOnNotExistingMenupointToBig(self):
+        with self.assertRaises(MenupointNotExistingError):
+            self.testMenu.runMenupoint(3)
+
+    def testCallOnNotExistingMenupointToSmall(self):
+        with self.assertRaises(MenupointNotExistingError):
+            self.testMenu.runMenupoint(0)
+
+    def testCallOnNotExistingMenupointNotInt(self):
+        with self.assertRaises(MenupointNotExistingError):
+            self.testMenu.runMenupoint("wassap")

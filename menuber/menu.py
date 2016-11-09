@@ -16,10 +16,16 @@ class Menu:
     def runMenupoint(self, menupointNumber):
         """Runs the Function on Menupoint with the given menupoint number (index + 1).
         """
-        menupointNumber = menupointNumber - 1
-        #TODO: add exceptions for border cases
+        # TODO: this could be nicer ###############
+        if not isinstance(menupointNumber, int):
+            raise MenupointNotExistingError("Invalid input.")
 
-        print(self.menupoints[menupointNumber])
+        menupointNumber = menupointNumber - 1
+
+        if menupointNumber < 0 or (menupointNumber + 1) > len(self.menupoints):
+            raise MenupointNotExistingError("Invalid input.")
+        ###########################################
+
         return self.menupoints[menupointNumber].runFunction()
 
 

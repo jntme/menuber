@@ -18,5 +18,6 @@ setup(
     author_email='mail@jntme.ch',
     url='https://github.com/jntme/%s' % NAME,
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages(exclude=('tests', 'docs')),
+    test_suite='tests'
 )

@@ -16,7 +16,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  coverage run --source=menuber setup.py test
+  - coverage run --source=menuber setup.py test
 
 branches:
   only:

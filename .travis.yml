@@ -8,12 +8,15 @@ python:
   - "3.6-dev" # 3.6 development branch
   - "nightly" # currently points to 3.7-dev
 
+before_install:
+
 # command to install dependencies
 install:
   - pip install .
   - pip install -r requirements.txt
 
-script: python setup.py test
+script:
+  coverage run --source=menuber setup.py test
 
 branches:
   only:

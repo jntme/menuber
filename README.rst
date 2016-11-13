@@ -9,6 +9,10 @@ menuber
     :target: https://landscape.io/github/jntme/menuber/master
     :alt: Code Health
 
+.. image:: https://coveralls.io/repos/github/jntme/menuber/badge.svg?branch=master
+    :target: https://coveralls.io/github/jntme/menuber?branch=master
+
+
 A package that makes cli menuing easier.
 
 How is this thing working?

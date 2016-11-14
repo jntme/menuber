@@ -1,4 +1,4 @@
-class Menu:
+class Menu(object):
     """
     Main class of the package. A menu contains menupoints.
     """
